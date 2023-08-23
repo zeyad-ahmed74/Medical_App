@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Calls">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/CallsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:text="@string/calls"
+        android:textColor="@color/text_color"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/CallsTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="@dimen/_15sdp"/>
+
+   <androidx.cardview.widget.CardView
+    android:id="@+id/call1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_150sdp"
+    app:layout_constraintTop_toBottomOf="@id/CallsTxt"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    app:cardElevation="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:backgroundTint="@color/white">
+
+       <ImageView
+           android:id="@+id/contactNameIcon"
+           android:layout_width="@dimen/_25sdp"
+           android:layout_height="@dimen/_25sdp"
+           android:layout_margin="@dimen/_20sdp"
+           android:src="@drawable/person_icons"
+           android:background="@drawable/icon_back_ground"
+           app:tint="@color/white"/>
+
+       <TextView
+           android:id="@+id/contactName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="@dimen/_60sdp"
+           android:layout_marginTop="@dimen/_25sdp"
+           android:text="Ahmed Ali Osama"
+           android:textColor="@color/black"/>
+
+       <ImageView
+           android:id="@+id/dateOFCallIcon"
+           android:layout_width="@dimen/_25sdp"
+           android:layout_height="@dimen/_25sdp"
+           android:src="@drawable/calender"
+           android:background="@drawable/icon_back_ground"
+           app:tint="@color/white"
+           android:layout_marginTop="@dimen/_60sdp"
+           android:layout_marginStart="@dimen/_20sdp"/>
+
+       <TextView
+           android:id="@+id/dateOFCall"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="@dimen/_60sdp"
+           android:layout_marginTop="@dimen/_65sdp"
+           android:text="26 - 7 - 2023"
+           android:textColor="@color/black"/>
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/accept"
+           android:layout_width="@dimen/_80sdp"
+           android:layout_height="@dimen/_40sdp"
+           android:layout_gravity="bottom"
+           android:layout_marginBottom="@dimen/_8sdp"
+           android:layout_marginStart="@dimen/_80sdp"
+           android:backgroundTint="#1AD672"
+           android:background="@drawable/background_btn"
+           android:text="@string/accept"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:drawableStart="@drawable/correct"
+           android:padding="@dimen/_10sdp"/>
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/busy"
+           android:layout_width="@dimen/_80sdp"
+           android:layout_height="@dimen/_40sdp"
+           android:layout_gravity="bottom"
+           android:layout_marginBottom="@dimen/_8sdp"
+           android:layout_marginStart="@dimen/_180sdp"
+           android:backgroundTint="#EC9511"
+           android:background="@drawable/background_btn"
+           android:text="@string/busy"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:drawableStart="@drawable/wrong"
+           android:padding="@dimen/_10sdp"/>
+
+   </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/call2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintTop_toBottomOf="@id/call1"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        android:backgroundTint="@color/white">
+
+        <ImageView
+            android:id="@+id/contactNameIcon2"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_20sdp"
+            android:src="@drawable/person_icons"
+            android:background="@drawable/icon_back_ground"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/contactName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="Gad Hamdy Gad"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/dateOFCallIcon2"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/calender"
+            android:background="@drawable/icon_back_ground"
+            app:tint="@color/white"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/dateOFCall2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_65sdp"
+            android:text="10 - 12 - 2023"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/accept2"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:backgroundTint="#1AD672"
+            android:background="@drawable/background_btn"
+            android:text="@string/accept"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/correct"
+            android:padding="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/busy2"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_180sdp"
+            android:backgroundTint="#EC9511"
+            android:background="@drawable/background_btn"
+            android:text="@string/busy"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/wrong"
+            android:padding="@dimen/_10sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/call3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintTop_toBottomOf="@id/call2"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        android:backgroundTint="@color/white">
+
+        <ImageView
+            android:id="@+id/contactNameIcon3"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_20sdp"
+            android:src="@drawable/person_icons"
+            android:background="@drawable/icon_back_ground"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/contactName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="Adam Ali Mohammed"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/dateOFCallIcon3"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/calender"
+            android:background="@drawable/icon_back_ground"
+            app:tint="@color/white"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/dateOFCall3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_65sdp"
+            android:text="5 - 9 - 2023"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/accept3"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:backgroundTint="#1AD672"
+            android:background="@drawable/background_btn"
+            android:text="@string/accept"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/correct"
+            android:padding="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/busy3"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_180sdp"
+            android:backgroundTint="#EC9511"
+            android:background="@drawable/background_btn"
+            android:text="@string/busy"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/wrong"
+            android:padding="@dimen/_10sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

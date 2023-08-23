@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/_5sdp"
+        >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="@dimen/_6sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/Nurse_Img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/nurse"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/Nurse_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/active"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/Nurse_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Ghada Adel"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="#343434"
+        app:layout_constraintTop_toTopOf="@id/frame"
+        app:layout_constraintStart_toEndOf="@id/frame"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:maxLength="20"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/Nurse_specialist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Specialist - Nurse"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/Nurse_name"
+        app:layout_constraintStart_toStartOf="@id/Nurse_name"
+        />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/Nurse_name"
+        app:layout_constraintStart_toEndOf="@id/Nurse_specialist"
+        android:layout_marginStart="@dimen/_60sdp"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

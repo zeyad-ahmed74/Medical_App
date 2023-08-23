@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.hr.NewUser">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/rectangle_3"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/newUserTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_14sdp"
+        android:text="@string/new_user"
+        android:textColor="@color/text_color"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="@id/newUserTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_8sdp"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/first_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/newUserTxt"
+        android:layout_marginTop="@dimen/_10sdp"
+        style="@style/TextInputLayout"
+        android:hint="@string/first_name"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:startIconDrawable="@drawable/person_icons"
+        app:startIconTint="@color/main_color">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/last_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/first_name_layout"
+        android:layout_marginTop="@dimen/_5sdp"
+        style="@style/TextInputLayout"
+        android:hint="@string/last_name"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:startIconDrawable="@drawable/person_icons"
+        app:startIconTint="@color/main_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gender_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/last_name_layout"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:hint="@string/gender"
+        style="@style/TextInputDropDownLayout"
+        app:startIconDrawable="@drawable/gender"
+        app:startIconTint="@color/main_color">
+
+        <AutoCompleteTextView
+            android:id="@+id/gender_auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/specialists_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gender_layout"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:hint="@string/specialist"
+        style="@style/TextInputDropDownLayout"
+        app:startIconDrawable="@drawable/medical_case"
+        app:startIconTint="@color/main_color">
+
+        <AutoCompleteTextView
+            android:id="@+id/specialists_auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/birthday_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/specialists_layout"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:hint="@string/calendar"
+        style="@style/TextInputDropDownLayout"
+        app:startIconDrawable="@drawable/calender"
+        app:startIconTint="@color/main_color"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/birthday_auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/birthday_layout"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:hint="@string/statues"
+        style="@style/TextInputDropDownLayout"
+        app:startIconDrawable="@drawable/heart"
+        app:startIconTint="@color/main_color">
+
+    <AutoCompleteTextView
+        android:id="@+id/statues_auto_complete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="none"
+        android:layout_weight="1"
+        android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/status_layout"
+        android:layout_marginTop="@dimen/_5sdp"
+        style="@style/TextInputLayout"
+        android:hint="@string/phone_number"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:startIconDrawable="@drawable/call"
+        app:startIconTint="@color/main_color">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mobile_layout"
+        android:layout_marginTop="@dimen/_5sdp"
+        style="@style/TextInputLayout"
+        android:hint="@string/e_mail"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:startIconDrawable="@drawable/email"
+        app:startIconTint="@color/main_color">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/email_layout"
+        android:layout_marginTop="@dimen/_5sdp"
+        style="@style/TextInputLayout"
+        android:hint="@string/address"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:startIconDrawable="@drawable/location"
+        app:startIconTint="@color/main_color">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:inputType="textPostalAddress"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/address_layout"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:hint="@string/password"
+        style="@style/TextInputLayout"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:startIconDrawable="@drawable/password"
+        app:startIconTint="@color/main_color"
+        app:endIconDrawable="@drawable/ic_eye"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/main_color"
+        app:endIconCheckable="true"
+        app:errorIconDrawable="@drawable/ic_error"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/create_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password_layout"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/background_btn"
+        android:backgroundTint="@color/main_color"
+        android:text="@string/create_user"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rectangle_2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

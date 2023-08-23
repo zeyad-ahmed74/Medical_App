@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="268" height="268" viewBox="0 0 268 268"> <defs> <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox"> <stop offset="0" stop-color="#22c7b8" stop-opacity="0.141"/> <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient> </defs> <path id="Rectangle_2"
+        d="M0,0H268a0,0,0,0,1,0,0V268a0,0,0,0,1,0,0H112A112,112,0,0,1,0,156V0A0,0,0,0,1,0,0Z"
+        fill="url(#linear-gradient)"/> </svg>
+</selector>

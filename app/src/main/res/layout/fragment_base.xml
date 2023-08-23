@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Base">
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/image"
+      android:layout_width="@dimen/_37sdp"
+      android:layout_height="@dimen/_37sdp"
+      android:layout_margin="@dimen/_10sdp"
+      android:clickable="true"
+      android:focusable="true"
+      android:src="@drawable/ahmed_omar_images"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="@dimen/_10sdp"
+      android:clickable="true"
+      android:focusable="true"
+      android:textColor="@color/black"
+      android:textSize="@dimen/_14ssp"
+      app:layout_constraintStart_toEndOf="@id/image"
+      app:layout_constraintTop_toTopOf="@id/image"
+      tools:text="Ahmed Omar" />
+
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/specialist"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="@dimen/_10sdp"
+      android:layout_marginTop="@dimen/_2sdp"
+      android:textColor="@color/main_color"
+      android:textSize="@dimen/_10ssp"
+      app:layout_constraintStart_toEndOf="@id/image"
+      app:layout_constraintTop_toBottomOf="@id/name"
+      tools:text="Specialist , HR" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/notification"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/_12sdp"
+      android:clickable="true"
+      android:focusable="true"
+      android:src="@drawable/notification"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@id/image" />
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/employee"
+      android:layout_width="@dimen/_140sdp"
+      android:layout_height="@dimen/_182sdp"
+      android:layout_marginTop="@dimen/_35sdp"
+      android:backgroundTint="#DC915F"
+      android:clickable="true"
+      android:focusable="true"
+      app:cardCornerRadius="@dimen/_10sdp"
+      app:layout_constraintStart_toStartOf="@id/image"
+      app:layout_constraintTop_toBottomOf="@id/specialist">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/groups" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="@string/employee"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+  </androidx.cardview.widget.CardView>
+  <androidx.cardview.widget.CardView
+      android:id="@+id/calls"
+      android:layout_width="@dimen/_140sdp"
+      android:layout_height="@dimen/_182sdp"
+      android:layout_marginTop="@dimen/_35sdp"
+      android:backgroundTint="#5F9EDC"
+      android:clickable="true"
+      android:focusable="true"
+      app:cardCornerRadius="@dimen/_10sdp"
+      android:visibility="gone"
+      app:layout_constraintStart_toStartOf="@id/image"
+      app:layout_constraintTop_toBottomOf="@id/specialist">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/add_emp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+          android:text="@string/calls"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+  </androidx.cardview.widget.CardView>
+
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/tasks"
+      android:layout_width="@dimen/_135sdp"
+      android:layout_height="@dimen/_148sdp"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:backgroundTint="#5FDC89"
+      android:clickable="true"
+      android:focusable="true"
+      app:cardCornerRadius="@dimen/_10sdp"
+      app:layout_constraintStart_toEndOf="@id/employee"
+      app:layout_constraintTop_toTopOf="@id/employee">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/tasks" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="@string/tasks"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+  </androidx.cardview.widget.CardView>
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/reports"
+      android:layout_width="@dimen/_135sdp"
+      android:layout_height="@dimen/_148sdp"
+      android:layout_marginTop="@dimen/_15sdp"
+      android:backgroundTint="#915FDC"
+      android:clickable="true"
+      android:focusable="true"
+      app:cardCornerRadius="@dimen/_10sdp"
+      app:layout_constraintStart_toStartOf="@id/image"
+      app:layout_constraintTop_toBottomOf="@id/employee">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/reports" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:text="@string/reports"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+  </androidx.cardview.widget.CardView>
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/attendance"
+      android:layout_width="@dimen/_140sdp"
+      android:layout_height="@dimen/_182sdp"
+      android:layout_marginStart="@dimen/_10sdp"
+      android:layout_marginTop="@dimen/_15sdp"
+      android:backgroundTint="#5FDCDC"
+      android:clickable="true"
+      android:focusable="true"
+      app:cardCornerRadius="@dimen/_10sdp"
+      app:layout_constraintBottom_toBottomOf="@id/reports"
+      app:layout_constraintStart_toEndOf="@id/reports">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/finger_id" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="@string/attendance_leaving"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+  </androidx.cardview.widget.CardView>
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cases"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_100sdp"
+      android:layout_marginTop="@dimen/_15sdp"
+      android:backgroundTint="#DC915F"
+      android:clickable="true"
+      android:focusable="true"
+      app:cardCornerRadius="@dimen/_10sdp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/reports"
+      android:layout_marginHorizontal="@dimen/_10sdp"
+      android:visibility="gone">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:src="@drawable/cases" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:text="@string/cases"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp" />
+
+  </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

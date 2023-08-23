@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.hr.Employees">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/EmployeeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:text="@string/employee"
+        android:textColor="@color/text_color"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/EmployeeTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="@dimen/_15sdp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_for_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/EmployeeTxt"
+        android:hint="@string/search_for_employee"
+        android:textColorHint="#80000000"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        style="@style/TextInputLayout"
+        app:startIconDrawable="@drawable/search">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search_for_emp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/typeOfEmp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AllEmp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/background_btn2"
+                android:text="@string/all"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:textAllCaps="false"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/background_btn2"
+                android:text="@string/doctor"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:textAllCaps="false"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Nurse"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/background_btn2"
+                android:text="@string/nurse"
+                android:textAllCaps="false"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/HREmp"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/background_btn2"
+                android:text="@string/hr_employee"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:textAllCaps="false"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AnaEmp"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/background_btn2"
+                android:text="@string/analysis_employee"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/AddNewUser"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:src="@drawable/ic_add"
+            app:backgroundTint="@color/main_color"
+            app:elevation="@dimen/_8sdp"
+            app:tint="@color/white"
+            android:contentDescription="@string/todo" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/employeesRec"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ScrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_emptype_layout"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

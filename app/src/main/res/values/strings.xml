@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Medical App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="e_mail">E_mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="or">OR</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome_back">Welcome back !</string>
+    <string name="phone_number">Phone number</string>
+    <string name="to_continue_login_now">To Continue , Login Now</string>
+    <string name="prototype_map">Prototype Map</string>
+    <string name="doctor">Doctor</string>
+    <string name="receptionist">Receptionist</string>
+    <string name="nurse">Nurse</string>
+    <string name="analysis_employee">Analysis Employee</string>
+    <string name="manager">Manager</string>
+    <string name="hr">HR</string>
+    <string name="hospital_system">Hospital System</string>
+    <string name="employee">Employee</string>
+    <string name="reports">Reports</string>
+    <string name="tasks">Tasks</string>
+    <string name="attendance_leaving">attendance-leaving</string>
+    <string name="first_name">First name</string>
+    <string name="new_user">New user</string>
+    <string name="last_name">Last Name</string>
+    <string name="gender">Gender</string>
+    <string name="calendar">Calendar</string>
+    <string name="statues">Statues</string>
+    <string name="address">Address</string>
+    <string name="create_user">Create user</string>
+    <string name="search_for_employee">Search for Employee</string>
+    <string name="all">All</string>
+    <string name="hr_employee">HR Employee</string>
+    <string name="specialist">Specialist</string>
+    <string name="my_profile">My Profile</string>
+    <string name="todo">TODO</string>
+    <string name="cases">Cases</string>
+    <string name="calls">Calls</string>
+    <string name="busy">Busy</string>
+    <string name="accept">Accept</string>
+    <string name="Case">Case</string>
+    <string name="medical_record">Medical record</string>
+    <string name="case_details">Case Details</string>
+    <string name="medical_measurement">Medical measurement</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="age">Age</string>
+    <string name="date">Date</string>
+    <string name="case_description">Case Description</string>
+    <string name="add_nurse">Add Nurse</string>
+    <string name="end_case">End Case</string>
+    <string name="search_for_nurse">Search for nurse</string>
+    <string name="select_nurse">Select Nurse</string>
+
+</resources>

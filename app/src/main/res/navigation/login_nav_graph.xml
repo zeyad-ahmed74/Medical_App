@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/loading2">
+    <fragment
+        android:id="@+id/loading2"
+        android:name="com.zeyad.medicalapp.ui.Loading"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loading2_to_startUp"
+            app:destination="@id/startUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/login6"
+        android:name="com.zeyad.medicalapp.ui.Login"
+        android:label="Login" >
+        <argument
+            android:name="specialist"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/startUp"
+        android:name="com.zeyad.medicalapp.ui.StartUp"
+        android:label="fragment_start_up"
+        tools:layout="@layout/fragment_start_up" >
+        <action
+            android:id="@+id/action_startUp_to_login6"
+            app:destination="@id/login6" />
+    </fragment>
+</navigation>

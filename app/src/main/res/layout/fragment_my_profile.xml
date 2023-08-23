@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0F9588"
+    android:orientation="vertical"
+    tools:context=".ui.MyProfile">
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:backgroundTint="#0F9588"
+        android:contentDescription="@string/all"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/MyProfileTxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginTop="@dimen/_30sdp"
+          android:text="@string/my_profile"
+          android:textSize="@dimen/_16ssp"
+          android:textColor="@color/white"
+          android:fontFamily="@string/font_family_light" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_410sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_46sdp"
+        android:elevation="@dimen/_12sdp"
+        app:cardCornerRadius="@dimen/_25sdp"
+        app:layout_constraintTop_toTopOf="@id/img">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/MyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Ahmed Salah"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/main_color"/>
+
+        <LinearLayout
+            android:id="@+id/SpecialistLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_85sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/medical_case"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="#3222C7B8"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Specialist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Specialist - Doctor"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/GenderLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_130sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/gender"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="#3222C7B8"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Male"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BirthDayLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_175sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/calender"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="#3222C7B8"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/BirthDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="29/03/1990"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/AddressLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_220sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/location"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="#3222C7B8"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Cairo , October"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/StatusLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_265sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/heart"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="#3222C7B8"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Single"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/EmailLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_310sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/email"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="#3222C7B8"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="zaboderm@gmail.com"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/PhoneLayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_355sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/call"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="#3222C7B8"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="01002882077"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+         android:id="@+id/img"
+         android:layout_width="@dimen/_80sdp"
+         android:layout_height="@dimen/_80sdp"
+         app:layout_constraintTop_toBottomOf="@id/MyProfileTxt"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+         android:elevation="@dimen/_5sdp"
+         android:src="@drawable/ahmed_omar_images"
+         android:layout_marginTop="@dimen/_30sdp"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/pen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_82sdp"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/pen"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

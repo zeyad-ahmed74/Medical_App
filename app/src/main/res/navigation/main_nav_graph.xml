@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/base2">
+
+    <fragment
+        android:id="@+id/calls3"
+        android:name="com.zeyad.medicalapp.ui.Calls"
+        android:label="fragment_calls"
+        tools:layout="@layout/fragment_calls" >
+        <action
+            android:id="@+id/action_calls3_to_base2"
+            app:destination="@id/base2" />
+    </fragment>
+    <fragment
+        android:id="@+id/base2"
+        android:name="com.zeyad.medicalapp.ui.Base"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" >
+        <action
+            android:id="@+id/action_base2_to_calls3"
+            app:destination="@id/calls3" />
+        <action
+            android:id="@+id/action_base2_to_employees2"
+            app:destination="@id/employees2" />
+        <action
+            android:id="@+id/action_base2_to_myProfile2"
+            app:destination="@id/myProfile" />
+        <action
+            android:id="@+id/action_base2_to_caseDetails"
+            app:destination="@id/caseDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/employees2"
+        android:name="com.zeyad.medicalapp.ui.hr.Employees"
+        android:label="fragment_employees"
+        tools:layout="@layout/fragment_employees" >
+        <action
+            android:id="@+id/action_employees2_to_base2"
+            app:destination="@id/base2" />
+        <action
+            android:id="@+id/action_employees2_to_newUser"
+            app:destination="@id/newUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfile"
+        android:name="com.zeyad.medicalapp.ui.MyProfile"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" >
+        <action
+            android:id="@+id/action_myProfile_to_base22"
+            app:destination="@id/base2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newUser"
+        android:name="com.zeyad.medicalapp.ui.hr.NewUser"
+        android:label="fragment_new_user"
+        tools:layout="@layout/fragment_new_user" >
+        <action
+            android:id="@+id/action_newUser_to_employees2"
+            app:destination="@id/employees2" />
+    </fragment>
+    <fragment
+        android:id="@+id/caseDetails"
+        android:name="com.zeyad.medicalapp.ui.CaseDetails"
+        android:label="fragment_case_details"
+        tools:layout="@layout/fragment_case_details" >
+        <action
+            android:id="@+id/action_caseDetails_to_base2"
+            app:destination="@id/base2" />
+        <action
+            android:id="@+id/action_caseDetails_to_listNurses"
+            app:destination="@id/listNurses" />
+    </fragment>
+    <fragment
+        android:id="@+id/listNurses"
+        android:name="com.zeyad.medicalapp.ListNurses"
+        android:label="fragment_list_nurses"
+        tools:layout="@layout/fragment_list_nurses" >
+        <action
+            android:id="@+id/action_listNurses_to_caseDetails"
+            app:destination="@id/caseDetails" />
+    </fragment>
+</navigation>

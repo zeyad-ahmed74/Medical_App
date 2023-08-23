@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.CaseDetails">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/CaseDetailsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:text="@string/case_details"
+        android:textColor="@color/black"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/CaseDetailsTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="@dimen/_15sdp"/>
+
+
+    <LinearLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/CaseDetailsTxt"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Case"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_btn2"
+            android:text="Case"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/medRec"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_btn2"
+            android:text="@string/medical_record"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/medMea"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_btn2"
+            android:text="@string/medical_measurement"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/patientNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/info"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/patient_name"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientNameTxt"
+        app:layout_constraintStart_toEndOf="@id/patientNameTxt"
+        android:text="Ahmed Ali"
+        android:layout_marginStart="@dimen/_110sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientAgeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientNameTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/age"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientAgeTxt"
+        app:layout_constraintStart_toEndOf="@id/patientAgeTxt"
+        android:text="35 years"
+        android:layout_marginStart="@dimen/_180sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientPhoneTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientAgeTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/phone_number"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientPhoneTxt"
+        app:layout_constraintStart_toEndOf="@id/patientPhoneTxt"
+        android:text="01002882077"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientDateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientPhoneTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/date"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientDateTxt"
+        app:layout_constraintStart_toEndOf="@id/patientDateTxt"
+        android:text="24-7-2023"
+        android:layout_marginStart="@dimen/_165sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientDoctorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientDateTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/doctor"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientDoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientDoctorTxt"
+        app:layout_constraintStart_toEndOf="@id/patientDoctorTxt"
+        android:text="Fadi Nagah"
+        android:layout_marginStart="@dimen/_150sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientNurseTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientDoctorTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/nurse"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientNurse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientNurseTxt"
+        app:layout_constraintStart_toEndOf="@id/patientNurseTxt"
+        android:text="Menna Salah"
+        android:layout_marginStart="@dimen/_145sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientStatusTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientNurseTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Status"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/patientStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/patientStatusTxt"
+        app:layout_constraintStart_toEndOf="@id/patientStatusTxt"
+        android:text="Process   "
+        android:layout_marginStart="@dimen/_150sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:drawableEndCompat="@drawable/process" />
+
+    <TextView
+        android:id="@+id/caseDesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/patientStatusTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/case_description"
+        android:layout_margin="@dimen/_20sdp"
+        android:textSize="@dimen/_14ssp"/>
+
+
+    <TextView
+        android:id="@+id/caseDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/caseDesTxt"
+        app:layout_constraintStart_toStartOf="@id/caseDesTxt"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:text="Details note : Lorem Ipsum is simply dummy
+                     text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's "
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addNurseBtn"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/caseDes"
+        app:layout_constraintStart_toStartOf="@id/caseDes"
+        android:layout_marginTop="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:backgroundTint="@color/main_color"
+        android:drawableStart="@drawable/ic_add"
+        android:text="@string/add_nurse"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reqNurseBtn"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/caseDes"
+        app:layout_constraintStart_toStartOf="@id/caseDes"
+        android:layout_marginTop="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_140sdp"
+        android:backgroundTint="@color/main_color"
+        android:drawableStart="@drawable/ic_add"
+        android:text="Request"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/endCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addNurseBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_50ssp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:backgroundTint="@color/text_red_color"
+        android:text="@string/end_case"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
